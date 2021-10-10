@@ -1,0 +1,216 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Registration From</title>
+<script language="javascript" type="text/javascript">
+
+function validateform()
+{	if(document.form1.fname.value.length==0)
+	{	alert("Please enter your name");
+		return;	}
+	
+	if(isNaN(document.form1.cid.value))
+	{	alert("Customer ID should be numeric");
+		return;	}
+		if(document.form1.addr.value.length==0)
+	{	alert("Please enter your address");
+		return;	}
+		
+		if(document.form1.email.pattern="[^ @]*@[^ @]*")
+	{	alert("Please enter Correct Email address");
+		return;	}
+		if(isNaN(document.form1.tp. pattern="^\d{10}$"))
+	{	alert("Phone should be numeric");
+		return;	}
+	if(document.form1.type.selectedIndex==0)
+	{	alert("Place Select you'r Vehicale Type?");
+		return;	}
+	
+	if((!document.form1.wash.checked) && (!document.form1.service.checked)&& (!document.form1.part.checked)&& (!document.form1.bod.checked)&& (!document.form1.sticker.checked) && (!document.form1.sound.checked))
+	{	alert("Select any services you want");
+		return;	}
+		
+	alert("Thank you for reserving with us!");	
+}
+
+</script>
+<style>
+
+form
+{ margin:0px auto;
+width:55%;
+
+font-size:20px;
+background-color: #06F;
+}
+input[type=text],select
+{
+	width:400px;
+	padding:8px 0;
+	border:1px solid #ccc;
+	box-sizing:border-box;
+	font-size:14px;
+	margin-top: 10px;
+    display: block;
+}
+input[type=email],select
+{
+	width:400px;
+	padding:8px 0;
+	border:1px solid #ccc;
+	box-sizing:border-box;
+	font-size:14px;
+	margin-top: 10px;
+    display: block;
+}
+input[type=date],select
+{
+	width:200px;
+	padding:8px 0;
+	border:1px solid #ccc;
+	box-sizing:border-box;
+	font-size:14px;
+	margin-top: 10px;
+    display: block;
+}
+input[type=checkbox],select
+{ color: #00F;
+	
+	
+}
+
+input[type=submit]
+{
+	width:100px;
+	background-color:#003399;
+	color: #F30;
+	padding:14px 20px;
+	margin:8px 0;
+	border:none;
+	border-radius:4px;
+	cursor:pointer;
+	font-size:16px;
+	
+}
+input[type=button]
+{
+	width:100px;
+	background-color:#003399;
+	color: #F30;
+	padding:14px 20px;
+	margin:8px 0;
+	border:none;
+	border-radius:4px;
+	cursor:pointer;
+	font-size:16px;
+	
+}
+input[type=submit]:hover
+{
+	background-color: #FF0;
+	
+}
+input[type=button]:hover
+{
+	background-color: #FF0;
+	
+}
+h1
+{
+	color:blue;
+	text-align:center;
+}
+h2{
+	color:#FF0;
+	text-align:center;
+	font: "Times New Roman", Times, serif;
+	
+}
+label
+{   color:white;
+   	float: left;
+	clear: left;
+	display: block;
+	width: 200px;
+	text-align: right;
+	padding-right: 10px;
+	margin-top: 10px;
+  	
+}
+a{
+	text-decoration:none;
+    display:inline-block;
+
+    width:50px;
+	background-color:#003399;
+	color: #F30;
+	padding:14px 20px;
+	margin:8px 0;
+	border:none;
+	border-radius:4px;
+	cursor:pointer;
+	font-size:16px;
+}
+a:hover
+{
+	background-color: #FF0;
+	
+}
+
+
+
+</style>
+
+</head>
+
+<body background="img/r1.jpg">
+
+
+<h1>Registration Form<h1>
+
+
+<form name="form1" method="post" action="a.php" >
+<h2> Information</h2>
+<label for="fname">Full Name</label>
+<input type="text" id="fname" name="fname" placeholder=" Enter Full Name" required="required" /></br>
+<label for="cid">Customer NIC</label>
+<input type="text" id="cid" name="cid" placeholder=" Enter Customer ID" required="required" /></br>
+<label for="addr">Address</label>
+<input type="text" id="addr" name="addr" placeholder=" Enter You'r address" required="required" /></br>
+<label for="email">Email</label>
+<input type="email" id="email" name="email" placeholder=" Enter You'r Email" required="required" /></br>
+<label for="tp">Contact Nu</label>
+<input type="text" id="tp" name="tp" placeholder=" Enter You'r Contact Number" required="required" /></br>
+<label for="vehicletype">Vehicle Type</label>
+<select id="type" name="type"/ >
+<option value="Car" >Car</option> 
+<option value="bike">Bike</option>
+<option value="tuktuk">Three Wheel</option></select></br>
+<label for="service" id="service" >Services</label>
+<input type="checkbox" name="wash"     value="wash" > Vehicle wash
+<input type="checkbox" name="service"  value="service"> Full Service
+<input type="checkbox" name="part"     value="part"> Spare parts</br> 
+<input type="checkbox" name="bod"      value="body">Body Kit
+<input type="checkbox" name="sticker"  value="sticker">Stickres
+<input type="checkbox" name="sound"    value="sound">Sound System </br></br>
+<label for="date">Appoiment Date</label>
+<input type="date" id="date" name="date" required="required" ></br></br></br>
+
+<input type="submit" value="Submit" >
+
+<a href="../index.html" class="previos">Back</a>
+
+
+<!--button >  <a href="../index.html">Back</a></button-->
+
+						
+					
+
+</form>
+
+
+  
+
+</body>
+</html>
